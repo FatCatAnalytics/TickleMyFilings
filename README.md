@@ -74,4 +74,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-This `README.md` provides an overview of your project, installation instructions, usage examples, and a reminder for users to update their personal information in the scraper's header. It's a good starting point for your GitHub repository that you can expand and customize as your project evolves.
