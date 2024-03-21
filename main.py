@@ -1,9 +1,9 @@
-from src.data_fetching import EdgarScraper
+from src.data_fetching import TickleMyFilings
 from src.data_processing import filter_xml_content, process_filtered_results, prepare_output_df
 
 def main():
     # Example usage
-    scraper = EdgarScraper()
+    scraper = TickleMyFilings()
     cik = '66740'
     form = '10-K'
     submission_df = scraper.get_submission_df(cik, form)
