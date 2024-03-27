@@ -1,4 +1,4 @@
-from src.data_fetching import TickleMyFilings
+from src.data_fetching import EdgarFiling
 from src.data_processing import filter_xml_content, process_filtered_results, prepare_output_df
 
 def main():
