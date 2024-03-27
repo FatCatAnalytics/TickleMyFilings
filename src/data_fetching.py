@@ -2,7 +2,7 @@ import requests
 import xmltodict
 import pandas as pd
 
-class Edgarfiling:
+class EdgarFiling:
     HEADER = {'User-Agent': 'FIRSTNAME LASTNAME EMAIL'}
     BASE_URL = 'https://www.sec.gov/Archives/edgar/data/'
     SUBMISSION_URL_TEMPLATE = 'https://data.sec.gov/submissions/CIK{}.json'
