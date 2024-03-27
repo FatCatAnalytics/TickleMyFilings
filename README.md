@@ -1,6 +1,6 @@
-# EdgarFiling
+# TickleMyFiling
 
-EdgarFiling is a Python tool designed to automate the fetching and analysis of SEC filings from the EDGAR database. It simplifies the process of retrieving financial data, parsing complex XML documents, and filtering for specific information like hedge accounting or derivative instruments.
+TickleMyFiling is a Python tool designed to automate the fetching and analysis of SEC filings from the EDGAR database. It simplifies the process of retrieving financial data, parsing complex XML documents, and filtering for specific information like hedge accounting or derivative instruments.
 
 ## Features
 
@@ -22,7 +22,7 @@ EdgarFiling is a Python tool designed to automate the fetching and analysis of S
 
 ```bash
 git clone https://github.com/yourusername/EdgarFiling.git
-cd EdgarFiling
+cd TickleMyFiling
 ```
 
 2. Install the required Python packages:
@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 ### Configuration
 
-Before using EdgarFiling, update the `HEADER` information in `data_fetching.py` to include your email or website. This is necessary to comply with the SEC's request to identify who is making the request.
+Before using TickleMyFiling, update the `HEADER` information in `data_fetching.py` to include your email or website. This is necessary to comply with the SEC's request to identify who is making the request.
 
 ```python
 class EdgarFiling:
