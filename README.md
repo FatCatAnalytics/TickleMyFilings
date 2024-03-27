@@ -1,6 +1,6 @@
-# TickleMyFilings
+# EdgarFiling
 
-TickleMyFilings is a Python tool designed to automate the fetching and analysis of SEC filings from the EDGAR database. It simplifies the process of retrieving financial data, parsing complex XML documents, and filtering for specific information like hedge accounting or derivative instruments.
+EdgarFiling is a Python tool designed to automate the fetching and analysis of SEC filings from the EDGAR database. It simplifies the process of retrieving financial data, parsing complex XML documents, and filtering for specific information like hedge accounting or derivative instruments.
 
 ## Features
 
@@ -21,8 +21,8 @@ TickleMyFilings is a Python tool designed to automate the fetching and analysis 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/TickleMyFilings.git
-cd TickleMyFilings
+git clone https://github.com/yourusername/EdgarFiling.git
+cd EdgarFiling
 ```
 
 2. Install the required Python packages:
@@ -33,10 +33,10 @@ pip install -r requirements.txt
 
 ### Configuration
 
-Before using TickleMyFilings, update the `HEADER` information in `data_fetching.py` to include your email or website. This is necessary to comply with the SEC's request to identify who is making the request.
+Before using EdgarFiling, update the `HEADER` information in `data_fetching.py` to include your email or website. This is necessary to comply with the SEC's request to identify who is making the request.
 
 ```python
-class TickleMyFilings:
+class EdgarFiling:
     HEADER = {'User-Agent': 'Your Name <youremail@example.com>'}
 ```
 
@@ -44,19 +44,19 @@ Replace `'Your Name <youremail@example.com>'` with your actual name and email ad
 
 ## Usage
 
-The `main.py` file serves as the entry point for the TickleMyFilings tool. Here's how to run it:
+The `main.py` file serves as the entry point for the EdgarFiling tool. Here's how to run it:
 
 ```bash
 python main.py
 ```
 
-For custom usage, you can import and use the TickleMyFilings class in your Python scripts:
+For custom usage, you can import and use the EdgarFiling class in your Python scripts:
 
 ```python
-from src.data_fetching import TickleMyFilings
+from src.data_fetching import EdgarFiling
 
 # Initialize scraper
-scraper = TickleMyFilings()
+scraper = EdgarFiling()
 
 # Fetch filings
 cik = '0000051143'  # Example CIK
