@@ -3,7 +3,7 @@ from src.data_processing import filter_xml_content, process_filtered_results, pr
 
 def main():
     # Example usage
-    scraper = TickleMyFilings()
+    scraper = EdgarFiling()
     cik = '66740'
     form = '10-K'
     submission_df = scraper.get_submission_df(cik, form)
