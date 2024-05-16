@@ -1,12 +1,13 @@
 import pandas as pd
 
+
 def filter_xml_content(xml_data, keys):
     results = []
 
     def search_dict(d):
         if isinstance(d, dict):
             for k, v in d.items():
-                if "hedge" in k.lower():
+                if any(key.lower() in k.lower() for key in keys):
                     results.append((k, v))
                 if isinstance(v, dict):
                     search_dict(v)
@@ -16,8 +17,10 @@ def filter_xml_content(xml_data, keys):
         elif isinstance(d, list):
             for item in d:
                 search_dict(item)
+
     search_dict(xml_data)
     return results
+
 
 def process_filtered_results(results):
     rows = []
