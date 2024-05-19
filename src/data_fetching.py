@@ -2,6 +2,7 @@ import requests
 import xmltodict
 import pandas as pd
 
+
 class EdgarFiling:
     HEADER = {'User-Agent': 'FIRSTNAME LASTNAME EMAIL'}
     BASE_URL = 'https://www.sec.gov/Archives/edgar/data/'
