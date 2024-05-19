@@ -31,6 +31,7 @@ def process_filtered_results(results):
             rows.extend([{**item, 'Category': key} for item in value])
     return pd.DataFrame(rows)
 
+
 def prepare_output_df(df):
     context_ref_df = df[['@contextRef', 'Category', '#text']].drop_duplicates()
     pivoted_df = context_ref_df.pivot(index='@contextRef', columns='Category', values='#text').reset_index()

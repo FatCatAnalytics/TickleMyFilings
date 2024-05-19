@@ -19,6 +19,7 @@ file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'outpu
 df = pd.read_csv(file_path)
 df['combined_text'] = df.apply(lambda row: ' '.join(row.dropna().astype(str)), axis=1)
 
+
 def preprocess_text(text):
     text = re.sub(r'[^a-zA-Z\s]', '', text, re.I|re.A)
     text = text.lower()
