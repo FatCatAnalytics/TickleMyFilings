@@ -33,6 +33,12 @@ def process_filtered_results(results):
 
 
 def prepare_output_df(df):
-    context_ref_df = df[['@contextRef', 'Category', '#text']].drop_duplicates()
+    context_ref_df = pd.DataFrame(df)
+
+    # Check for duplicates and handle them
+    if context_ref_df.duplicated(subset=['@contextRef', 'Category']).any():
+        context_ref_df = context_ref_df.drop_duplicates(subset=['@contextRef', 'Category'])
+
     pivoted_df = context_ref_df.pivot(index='@contextRef', columns='Category', values='#text').reset_index()
+
     return pivoted_df

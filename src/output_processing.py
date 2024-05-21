@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
-
 class OutputProcessor:
     def __init__(self, data, keywords):
         self.data = data
@@ -18,7 +17,7 @@ class OutputProcessor:
         return soup.get_text()
 
     def check_keyword(self, text):
-        if pd.isna(text):
+        if pd.isna(text) or not isinstance(text, str):
             return False
         for keyword in self.keywords:
             if keyword in text.lower():
@@ -44,6 +43,7 @@ class OutputProcessor:
             cleaned_data[column] = cleaned_data[column].apply(self.clean_html_exclude_tables)
 
         # Apply the check_hedge function to each row and create a new column 'hedge'
-        cleaned_data['hedge'] = cleaned_data.apply(lambda row: any(self.check_keyword(row[col]) for col in cleaned_data.columns), axis=1)
+        text_columns = cleaned_data.select_dtypes(include=['object', 'string']).columns
+        cleaned_data['hedge'] = cleaned_data.apply(lambda row: any(self.check_keyword(row[col]) for col in text_columns), axis=1)
 
         return cleaned_data
