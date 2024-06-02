@@ -67,7 +67,7 @@ if __name__ == "__main__":
     cik = pd.read_csv('inputs/CIK_Codes.txt', header=0)
     cik_list = cik['CIK'].tolist()[:100]
     form_type = '10-K'
-    keywords = ['hedging', 'derivatives']
+    keywords = ['hedging', 'derivatives', 'swaps']
     output_file_path = 'outputs/cleaned_output_updated.csv'
 
     main(cik_list, form_type, keywords, output_file_path)
